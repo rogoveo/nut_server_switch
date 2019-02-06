@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt-get install --no-cache git-core curl build-essential openssl libssl-dev \
+RUN apt-get install --no-cache-dir git-core curl build-essential openssl libssl-dev \
  && git clone https://github.com/nodejs/node.git \
  && cd node \
  && ./configure \
