@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "/usr/src/myapp/nut.py --server" ]
+CMD [ "python", "/usr/src/app/nut.py --server" ]
