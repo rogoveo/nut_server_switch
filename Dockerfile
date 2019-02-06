@@ -5,6 +5,6 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./ ./
+COPY . .
 
-CMD [ "python", "./nut.py --server" ]
+CMD [ "python", "/usr/src/myapp/nut.py --server" ]
