@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt-get install git-core curl build-essential openssl libssl-dev \
+ && apt-get install --no-cache git-core curl build-essential openssl libssl-dev \
  && git clone https://github.com/nodejs/node.git \
  && cd node \
  && ./configure \
@@ -11,7 +11,7 @@ RUN apt-get install git-core curl build-essential openssl libssl-dev \
  && sudo make install
 
 COPY . .
-CMD ls
+CMD ls && npm -v
 
 ENTRYPOINT [ "python", "./nut.py" ]
 
